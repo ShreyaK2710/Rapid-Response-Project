@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapid Response</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>Rapid Response</h1>
+    </header>
+    <p class="line1">If you have any natural or man made disaster in your area, please report here</p>
+    <div class="container">
+        <div class="vertical-center">
+            <a href="reportform.html" class="btn" target="_blank">Report</a>
+        </div>
+    </div>
+    
+    <p class="line2">Other Reports from all over the World</p>
+    <table>
+        <tr>
+            <th>Country</th>
+            <th>State</th>
+            <th>City</th>
+            <th>Pincode</th>
+            <th>Disaster</th>
+            <th>Poll</th>
+            <th>Success Rate</th>
+            <th>Official Confirmation</th>
+        </tr>
+        <tr>
+            <td>India</td>
+            <td>Tamil Nadu</td>
+            <td>Chennai</td>
+            <td>600035</td>
+            <td>Flood</td>
+            <td>
+                <button class="btn-yes" id="btn-yes" onclick="goToYesPage()">Yes</button>
+<button class="btn-no" id="btn-no" onclick="goToNoPage()">No</button>
+
+<script>
+function goToYesPage() {
+  window.location.href = "yes.html";
+}
+
+function goToNoPage() {
+  window.location.href = "no.html";
+}
+</script>
+
+              </td>              
+            <td>50%</td>
+            <td><button class="official-btn" id="official-btn">Official Confirmation
+                <script>
+                    var officialConfirmBtn = document.getElementById("official-btn");
+                    officialConfirmBtn.addEventListener("click", function() {
+                        window.location.href = "official confirmation.html";
+                    });
+                </script>
+                </button>
+            </td>
+        </tr>
+    </table>
+    <div style="text-align: center;">
+        <button onclick="redirectToSubmit()" style="background-color: #CEAB93; color:red; font-size: 20px;  padding: 14px 25px; display: inline-block; margin-top: 50px; margin-left: 0px; margin-right: 16px; cursor: pointer;">Delete</button>
+
+<script>
+  function redirectToSubmit() {
+    window.location.href = "index.html";
+  }
+</script>
+
+    </div>
+
+</body>
+</html>
