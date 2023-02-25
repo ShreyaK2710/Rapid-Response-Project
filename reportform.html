@@ -5,14 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Report Form</title>
-    <link rel="stylesheet" href="registerform.css">
-
+    <link rel="stylesheet" href="reportform.css">
 </head>
 <body>
     <div class="container">
         <h2>Report Form</h2>
 
-        <form action="insert.php" method="POST">
+        <form action="#">
             <select name="country" id="country" required>
                 <option value="" selected hidden>Select Country</option>
                 <option value="india">India</option>
@@ -109,7 +108,13 @@
                     <option value="Biological Incidents">Biological Incidents</option>
                     <option value="Extreme Weather Conditions">Extreme Weather Conditions</option>
                 </select>
-                <button type="submit" class="submit-button">Report</button>
+                <button type="submit" name="submit" class="submit-button" id="submit-button">Report</button>
+                    <script>
+                    document.querySelector("#submit-button").addEventListener("click", function(event){
+                    event.preventDefault();
+                     window.location.href = "submit.html";
+                     });
+                </script>                
         </form>
 
     </div>
